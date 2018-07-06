@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/wiki.iml" filepath="$PROJECT_DIR$/.idea/modules/wiki.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../wiki/.idea/modules/wiki_main.iml" filepath="$PROJECT_DIR$/../wiki/.idea/modules/wiki_main.iml" group="wiki" />
+      <module fileurl="file://$PROJECT_DIR$/../wiki/.idea/modules/wiki_test.iml" filepath="$PROJECT_DIR$/../wiki/.idea/modules/wiki_test.iml" group="wiki" />
+    </modules>
+  </component>
+</project>
