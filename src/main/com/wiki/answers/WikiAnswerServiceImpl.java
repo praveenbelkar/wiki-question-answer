@@ -16,6 +16,11 @@ public class WikiAnswerServiceImpl implements WikiAnswerService {
 
     @Override
     public Map<Integer, Integer> getAnswersForQuestionsFromWiki(String paragraph, String questions, String answers) {
+        //Validate input
+        if(invalidInputs(paragraph, questions, answers)) {
+            throw new RuntimeException("please pass all three inputs - paragraph, questions, answers");
+        }
+
         //Get the word count map for each sentence in paragraph, for each question and for each answer
         Map<Integer, Map<String, Integer>> sentenceWordCountMaps = getSentenceToWordCountMap(paragraph, ".");
         Map<Integer, Map<String, Integer>> questionsWordCountMaps = getSentenceToWordCountMap(questions, "?");
@@ -191,5 +196,14 @@ public class WikiAnswerServiceImpl implements WikiAnswerService {
 
         return cnt1 + cnt2 + cnt3;
     }
+
+    private boolean invalidInputs(String paragraph, String questions, String answers) {
+        return isEmpty(paragraph) || isEmpty((questions)) || isEmpty(answers);
+    }
+
+    private boolean isEmpty(String input) {
+        return null == input || input.trim().length() == 0 ;
+    }
+
 
 }
